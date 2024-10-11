@@ -33,37 +33,37 @@ To install PostgreSQL, follow these steps:
    sudo apt update
    ```
 2. Install PostgreSQL:
-   \`\`\`bash
+   ```bash
    sudo apt install postgresql postgresql-contrib
-   \`\`\`
+   ```
 
 ### Step 2: Access PostgreSQL
 
 To access the PostgreSQL database, use the following command:
-\`\`\`bash
+```bash
 sudo -i -u postgres
-\`\`\`
+```
 
 Once inside the PostgreSQL shell, you can create a new database and user.
 
 ### Step 3: Create a New Database
 
-\`\`\`bash
-createdb article_data
-\`\`\`
+```bash
+CREATE DATABASE <db_name>
+```
 
 ### Step 4: Set Environment Variables
 
-Update your \`.env\` file to include your PostgreSQL credentials. Add the following environment variables to the file:
+Update your `.env` file to include your PostgreSQL credentials. Add the following environment variables to the file:
 
-\`\`\`bash
+```bash
 DB_NAME=db_name
 DB_USER=db_username
 DB_PASSWORD=db_password
 DB_HOST=host_ip
 DB_PORT=port
 OPENAI_API_KEY=your_openai_api_key
-\`\`\`
+```
 
 ## API Endpoints
 
@@ -73,37 +73,37 @@ You can interact with the system using the following API endpoints via \`curl\`.
 
 This endpoint extracts updates from an article and analyzes specific fields.
 
-\`\`\`bash
+```bash
 curl -X POST http://<ip>:<port>/extract-data-update/ \
      -H "Content-Type: application/json" \
      -d '{"input": "<url_or_text>"}'
-\`\`\`
+```
 
 ### 2. Re-Generate Article
 
 This endpoint regenerates the article content based on extracted data.
 
-\`\`\`bash
+```bash
 curl -X POST http://<ip>:<port>/generate-article/ \
      -H "Content-Type: application/json" \
      -d '{"input": "<url_or_text>"}'
-\`\`\`
+```
 
 ### 3. Extract Original Article Text
 
 This endpoint extracts the original text from an article for further processing.
 
-\`\`\`bash
+```bash
 curl -X POST http://<ip>:<port>/extract-original-text/ \
      -H "Content-Type: application/json" \
      -d '{"input": "<url_or_text>"}'
-\`\`\`
+```
 
 ### 4. Store Extracted Data into Database
 
 This endpoint stores the extracted article data into the PostgreSQL database.
 
-\`\`\`bash
+```bash
 curl -X POST http://<ip>:<port>/store-extracted-data/ \
      -H "Content-Type: application/json" \
      -d '{
@@ -138,15 +138,15 @@ curl -X POST http://<ip>:<port>/store-extracted-data/ \
         		...
     		]
 	}'
-\`\`\`
+```
 
 ## Running the Project
 
 Once the environment is set up and the database is configured, you can run the FastAPI server with:
 
-\`\`\`bash
+```bash
 uvicorn main:app --reload --host <host-ip> --port <port>
-\`\`\`
+```
 
 ## Contributing
 
