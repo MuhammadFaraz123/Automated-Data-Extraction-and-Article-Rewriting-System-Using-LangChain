@@ -29,9 +29,9 @@ Before you start, make sure you have:
 To install PostgreSQL, follow these steps:
 
 1. Update your package lists:
-   \`\`\`bash
+   ```bash
    sudo apt update
-   \`\`\`
+   ```
 2. Install PostgreSQL:
    \`\`\`bash
    sudo apt install postgresql postgresql-contrib
