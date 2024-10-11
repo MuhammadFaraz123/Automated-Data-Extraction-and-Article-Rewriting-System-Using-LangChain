@@ -1,0 +1,18 @@
+fastapi
+pydantic
+langchain
+langchain-openai  
+openai
+python-dotenv  
+requests
+tiktoken
+selenium
+scrapegraphai
+psycopg2
+requests  
+
+
+# Note: You will need Google Chrome and chromedriver for getting data using Selenium.
+# Install Google Chrome from https://www.google.com/chrome/
+# Ensure chromedriver matches your installed Chrome version: https://sites.google.com/chromium.org/driver/
+# These are main libraries if some might not found please install it.
