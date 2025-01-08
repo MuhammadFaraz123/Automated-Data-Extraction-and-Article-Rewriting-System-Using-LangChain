@@ -1,5 +1,5 @@
 
-# Automated Data Extraction and Article Rewriting System Using LangChain
+# Automated Data Extraction and Article Rewriting System Using LangChain 
 
 This project is a FastAPI-based system that automates data extraction from articles, rewrites the content, and stores the extracted data into a PostgreSQL database. It uses LangChain and the OpenAI API to process and analyze article data, specifically related to updates and rewriting articles.
 
